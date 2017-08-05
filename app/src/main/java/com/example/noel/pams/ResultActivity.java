@@ -72,8 +72,10 @@ public class ResultActivity extends AppCompatActivity {
                 try {
                     JSONObject jsonObject= new JSONObject(response);
                     String error = jsonObject.getString("error");
-                    if(error.equalsIgnoreCase("null")) {
-                        mTextView1.setText("വിവരങ്ങൾ ലഭ്യമല്ല");
+                    if(error.equalsIgnoreCase("Invalid Register Number")) {
+                        mTextView2.setText("വിവരങ്ങൾ ലഭ്യമല്ല");
+                        //mTextView3.setText("വിവരങ്ങൾ ലഭ്യമല്ല");
+                        mTextView4.setText("വിവരങ്ങൾ ലഭ്യമല്ല");
                     }
                     else {
                         String name = jsonObject.getString("name");
@@ -88,7 +90,7 @@ public class ResultActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Toast.makeText(getApplicationContext(),
-                            "Error: " + "Something went Wrong. Please try again",
+                            "Error: " + "Something went Wrong. Try again",
                             Toast.LENGTH_LONG).show();
                     Log.d("EXCEPTION",e.toString());
                 }
