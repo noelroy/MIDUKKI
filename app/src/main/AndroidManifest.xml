@@ -25,6 +25,7 @@
             android:name=".MainActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:label="Pattayam Application Status"
             android:name=".ResultActivity"
             android:parentActivityName=".PatttayamActivity"
             android:screenOrientation="portrait">
@@ -36,6 +37,7 @@
         </activity>
         <activity
             android:name=".PatttayamActivity"
+            android:label="Pattayam Application Status"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" >
 
